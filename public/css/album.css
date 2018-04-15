@@ -1,0 +1,21 @@
+#album-block {
+  margin: 10px;
+}
+
+body {
+  margin:0;
+}
+
+#subtitle {
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+#img-align {
+  text-align: center;
+  padding: 10px;
+}
+
+hr {
+  border: 2px solid darkorange;
+}

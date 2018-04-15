@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Memes</title>
+	<link rel="stylesheet" href="/css/bootstrap.css">
+	<link rel="stylesheet" href="/css/album.css">
+	<script
+src="https://code.jquery.com/jquery-1.10.2.js"
+integrity="sha256-it5nQKHTz+34HijZJQkpNBIHsjpV8b6QzMJs9tmOBSo="
+crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+	crossorigin="anonymous"></script>
+	<script type="text/javascript">
+	$("document").ready(function() {
+ 		var template = $("#itemTemplate").html();
+ 		var result = Mustache.render(template, {
+			"images" : [{
+				 "source" : ["https://static1.squarespace.com/static/558c33b1e4b0aeae75bd92db/t/5abc18fb562fa7acbf1c7690/1522276609862/meme1.jpg?format=300w"],
+				 "description" : "Software Engineering Meme",
+				 "fulltime" : true
+			 }, {
+			 "source" : ["https://static1.squarespace.com/static/558c33b1e4b0aeae75bd92db/t/5abc1ba1562fa7acbf1cf5ed/1522277287134/meme2.jpg?format=500w"],
+			 "description" : "Software Engineering Meme",
+			 "fulltime" : true
+		 } , {
+		 "source" : ["https://static1.squarespace.com/static/558c33b1e4b0aeae75bd92db/t/5abc1bad0e2e72e0babdc34b/1522277298571/meme3.jpg?format=500w"],
+			"description" : "Software Engineering Meme",
+			"fulltime" : true
+		} , {
+		"source" : ["https://static1.squarespace.com/static/558c33b1e4b0aeae75bd92db/t/5abc1bb8562fa7acbf1cfa19/1522277312920/meme4.jpg?format=500w"],
+		"description" : "Software Engineering Meme",
+		"fulltime" : true
+	} , {
+	"source" : ["https://static1.squarespace.com/static/558c33b1e4b0aeae75bd92db/t/5abc1bc7f950b7364cf20b96/1522277323854/meme5.jpg?format=300w"],
+	"description" : "Software Engineering Meme",
+	"fulltime" : true
+}]
+		});
+ 		$("#container").html(result);
+  });
+	</script>
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Photo Album</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+						<li><a href="home">Home</a></li>
+						<li><a href="heroes">Heroes</a></li>
+						<li class="active"><a href="memes">Memes</a></li>
+						<li><a href="NDT-Tweets">NDT Tweets</a></li>
+            <li><a href="login">Login</a></li>
+						<li><a href="upload">Upload</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+
+    <div class="titlePanel">
+        <h1 id="img-align"><%= pageTitle %></h1>
+    </div>
+
+    <div class="container">
+
+     <div class="row">
+
+
+
+
+
+
+	
+	 			<script type="text/template" id="itemTemplate">
+	 					{{#images}}
+	 					<div class="itemTemplateWrapper">
+	 							{{! Add other details later? }}
+	 							<div id="img-align"><img src="{{source}}"></div>
+	 							<div id="subtitle">{{description}}</div>
+								<hr>
+	 					</div>
+	 					{{/images}}
+	 			</script>
+
+				<hr>
+
+	 			<!-- This is the container where the templates will be instantiated -->
+	 			<div id="container"></div>
+
+
+
+</div>
+
+    </div><!-- /.container -->
+</body>
+</html>
